@@ -1,0 +1,28 @@
+@using jpf-security
+@using jpf-symbc
+
+target=sidechannel.Salsa20
+symbolic.method=sidechannel.Salsa20.salsaCore(con#con#con)
+
+#sidechannel=timing
+
+classpath=${jpf-security}/build/examples;
+sourcepath=${jpf-security}/src/examples
+
+listener = sidechannel.singlerun.TimingChannelQuantifierNonLinear
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.omegaPath=oc
+symbolic.reliability.lattePath=count
+
+symbolic.min_int=0
+symbolic.max_int=9
+
+symbolic.counter=z3blocking
+#symbolic.counter=sharpsat
+#symbolic.counter=allsat
+#symbolic.counter=allsat
+symbolic.counter.sharpsat.path=/home/mateus/workspace/sharpSAT-fork-2/Release/sharpSAT
+symbolic.counter.allsat.path=/home/mateus/workspace/All_SAT/batch_all_sat
+symbolic.counter.bvlength=32
+symbolic.dp=z3bitvector

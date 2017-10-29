@@ -1,0 +1,32 @@
+target=multirun.adaptive.minimax.CRIMESimple
+
+classpath=${jpf-security}/build/examples;${jpf-security}/build/classes
+sourcepath=${jpf-security}/src/examples
+
+adaptive=minmax
+
+multirun.num_run = 8
+sidechannel.high_input_size = 4
+
+symbolic.min_byte=0
+symbolic.max_byte=2
+
+symbolic.min_int=0
+symbolic.max_int=2
+
+sidechannel.min_high=0
+sidechannel.max_high=2
+
+sidechannel.tmpDir = ${jpf-security}/build/tmp
+symbolic.reliability.tmpDir = ${jpf-security}/build/tmp/mc
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.debug = false
+
+sidechannel.verbose = false
+
+#symbolic.dp=z3
+#symbolic.dp=z3bitvector
+#symbolic.dp=no_solver
+

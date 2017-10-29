@@ -1,0 +1,25 @@
+#target=sidechannel.dynamicadaptive.SideChannelAppsDriver
+target = engagement1.gabfeed.math.Driver
+
+target.args=3
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.MathematicaPCListener
+
+temp.directory = ${jpf-security}/build/tmp
+
+symbolic.dp=z3bitvector
+
+sidechannel.verbose = false
+
+
+
+#greedy=false
+
+#multirun.num_run = 2
+#sidechannel.high_input_size = 3
+
+#sidechannel.min_high=1
+#sidechannel.max_high=5

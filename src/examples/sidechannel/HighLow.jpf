@@ -1,0 +1,20 @@
+target=sidechannel.HighLow
+#symbolic.method=sidechannel.HighLow.test(sym#sym)
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+#listener = sidechannel.singlerun.SideChannelQuantifier,.symbc.symexectree.visualizer.SymExecTreeVisualizerListener
+
+#listener = sidechannel.singlerun.SideChannelQuantifier
+
+sidechannel = timing
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.min_int=0
+symbolic.max_int=9
+
+sidechannel.verbose = true

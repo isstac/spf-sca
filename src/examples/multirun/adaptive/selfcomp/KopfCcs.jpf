@@ -1,0 +1,27 @@
+target = multirun.adaptive.selfcomp.KopfCcs
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+mutirun.secure_method=multirun.adaptive.minimax.KopfCcs.foo
+
+adaptive=selfcomp
+
+attack.tree=greedy
+
+multirun.num_run = 2
+sidechannel.high_input_size = 1
+
+symbolic.min_int = 0
+symbolic.max_int = 100
+
+sidechannel.min_high=1
+sidechannel.max_high=5
+
+SMT.theory = linear
+
+sidechannel.tmpDir = ${jpf-security}/build/tmp
+
+symbolic.debug = false
+
+sidechannel.verbose = false

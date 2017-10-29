@@ -1,0 +1,22 @@
+target=adaptive.BinarySearch
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 5
+sidechannel.high_input_size = 1
+
+sidechannel.min_high=1
+sidechannel.max_high=20
+
+SMT.theory = linear
+
+symbolic.dp = z3
+
+sidechannel.smt2 = ${jpf-security}/build/tmp/search.smt2
+
+sidechannel.verbose = false

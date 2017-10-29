@@ -1,0 +1,53 @@
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+target = engagement1.lawdb.DriverScaled
+
+##Exhaustive
+
+# Shannon
+shell=sidechannel.singlerun.noise.symbolic.SymbolicNoiseShell
+
+# Min entropy
+#shell=sidechannel.singlerun.noise.symbolic.SymbolicMinShell
+
+##Canopy
+canopy.termination.samplingsize=300
+#canopy.seed=-1359243304
+canopy.random=true
+canopy.stats=false
+canopy.livestats=false
+
+# Shannon
+#shell=sidechannel.canopy.probabilistic.SymbolicShannonShell
+
+# Min entropy
+#shell=sidechannel.canopy.probabilistic.SymbolicRenyiShell
+
+
+# Seems exhaustive is still tractable for this size (the one in the email). Takes XXX minutes
+#target.args=0,2048,800
+
+# Example that we use
+target.args=0,2048,300
+symbolic.min_int=0
+symbolic.max_int=2048
+
+# Smaller Example
+#target.args=0,100,10
+#symbolic.min_int=0
+#symbolic.max_int=100
+
+
+SMT.theory = linear
+sidechannel = timing
+
+symbolic.counter=barvinok
+
+sidechannel.verbose = false
+
+symbolic.optimizechoices=false
+
+symbolic.debug = false
+
+symbolic.dp=z3

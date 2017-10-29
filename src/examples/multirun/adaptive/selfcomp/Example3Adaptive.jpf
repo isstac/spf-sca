@@ -1,0 +1,27 @@
+target=multirun.adaptive.selfcomp.Example3Adaptive
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+mutirun.secure_method=multirun.adaptive.selfcomp.Example3Adaptive.foo
+
+adaptive=selfcomp
+
+attack.tree=full
+
+multirun.num_run = 5
+sidechannel.high_input_size = 1
+
+symbolic.min_int=0
+symbolic.max_int=4
+
+sidechannel.min_high=0
+sidechannel.max_high=4
+
+SMT.theory = linear
+
+sidechannel.tmpDir = ${jpf-security}/build/tmp
+
+symbolic.debug = false
+
+sidechannel.verbose = false

@@ -1,0 +1,33 @@
+target = multirun.adaptive.tree.KopfCcs
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+mutirun.secure_method=multirun.adaptive.tree.KopfCcs.foo
+
+adaptive=tree
+
+attack.tree=entropy
+
+multirun.num_run = 1
+sidechannel.high_input_size = 1
+
+symbolic.min_int = 0
+symbolic.max_int = 100
+
+#sidechannel.min_high=1
+#sidechannel.max_high=5
+
+SMT.theory = linear
+
+modelcounting.timer = 1
+tree.timer = 10
+
+sidechannel.tmpDir = ${jpf-security}/build/tmp
+symbolic.reliability.tmpDir = ${jpf-security}/build/tmp/mc
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.debug = false
+
+sidechannel.verbose = false

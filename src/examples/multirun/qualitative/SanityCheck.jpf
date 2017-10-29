@@ -1,0 +1,7 @@
+target=multirun.qualitative.SanityCheck
+target.args=1
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+symbolic.dp=z3

@@ -1,0 +1,34 @@
+target=adaptive.ModPow
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 2
+sidechannel.high_input_size = 1
+
+# optional settings
+symbolic.min_int=1
+#symbolic.max_int=1717
+#symbolic.max_int=834443
+symbolic.max_int=1964903306
+
+symbolic.debug = false
+
+sidechannel.min_high=1
+#sidechannel.max_high=7
+sidechannel.max_high=15
+#sidechannel.max_high=31
+
+MaxSMT = 1
+
+sidechannel.smt2 = ${jpf-security}/build/tmp/segmented.smt2
+
+symbolic.dp = no_solver
+#symbolic.dp = z3bitvector
+
+
+sidechannel.verbose = false

@@ -1,0 +1,22 @@
+target=adaptive.Main
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 3
+sidechannel.high_input_size = 3
+
+sidechannel.min_high=1
+sidechannel.max_high=5
+
+greedy.input = ${jpf-security}/build/tmp/input.txt
+sidechannel.smt2 = ${jpf-security}/build/tmp/main.smt2
+
+symbolic.dp=z3bitvector
+#symbolic.dp=no_solver
+
+sidechannel.verbose = false

@@ -1,0 +1,19 @@
+target=sidechannel.InsecurePasswordChecker
+symbolic.method=sidechannel.InsecurePasswordChecker.check(con)
+
+#sidechannel=timing
+
+classpath=${jpf-security}/build/examples;
+sourcepath=${jpf-security}/src/examples
+
+listener = sidechannel.abc.TimingChannelQuantifierABC
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+#symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+#symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.reliability.omegaPath=/home/lucas/vlab/projects/the-omega-project/omega_calc/obj/oc
+symbolic.reliability.lattePath=/home/lucas/vlab/projects/latte-integrale-1.7.3/dest/bin/count
+
+symbolic.min_int=0
+symbolic.max_int=7

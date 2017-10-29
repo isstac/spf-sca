@@ -1,0 +1,25 @@
+target = sidechannel.KopfCcs
+target.args = 1
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+#listener = sidechannel.singlerun.PathInspector
+listener = sidechannel.multirun.adaptive.greedy.SynthesizeAttackTreeListener
+
+multirun.num_run = 2
+sidechannel.high_input_size = 1
+
+symbolic.min_int = 0
+symbolic.max_int = 100
+
+SMT.theory = linear
+
+sidechannel.tmpDir = ${jpf-security}/build/tmp
+symbolic.reliability.tmpDir = ${jpf-security}/build/tmp/mc
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.debug = false
+
+sidechannel.verbose = false

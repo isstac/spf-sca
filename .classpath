@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="build/main" path="src/main"/>
+	<classpathentry kind="src" path="src/peers"/>
+	<classpathentry kind="src" path="src/classes"/>
+	<classpathentry kind="src" output="build/examples" path="src/examples"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-symbc"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
+	<classpathentry kind="lib" path="/jpf-symbc/lib/com.microsoft.z3.jar"/>
+	<classpathentry kind="lib" path="/jpf-symbc/lib/green.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-4.5.3-complete.jar"/>
+	<classpathentry kind="lib" path="lib/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-jcs-core-2.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/jung-graph-impl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jung-algorithms-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jung-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="lib/javax.inject.jar"/>
+	<classpathentry kind="lib" path="lib/modelcounting.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

@@ -1,0 +1,29 @@
+target=adaptive.CRIME
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 5
+sidechannel.high_input_size = 2
+
+sidechannel.min_high=1
+sidechannel.max_high=50
+
+symbolic.min_int=1
+symbolic.max_int=50
+
+symbolic.min_byte=1
+symbolic.max_byte=50
+
+SMT.theory = linear
+
+sidechannel.smt2 = ${jpf-security}/build/tmp/crime.smt2
+
+#symbolic.dp = no_solver
+#symbolic.dp = z3
+
+sidechannel.verbose = false

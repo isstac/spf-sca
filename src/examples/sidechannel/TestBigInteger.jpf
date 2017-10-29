@@ -1,0 +1,17 @@
+target=sidechannel.TestBigInteger
+symbolic.method=sidechannel.TestBigInteger.test(sym)
+
+classpath=${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=gov.nasa.jpf.symbc.SymbolicListener
+#listener = sidechannel.TimingChannelListener
+
+#symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+#symbolic.reliability.omegaPath=/home/qsp/Programs/omega/oc
+#symbolic.reliability.lattePath=/home/qsp/Programs/latte-integrale-1.7.3/bin/count
+
+#symbolic.min_int=0
+#symbolic.max_int=10
+
+symbolic.dp=z3bitvector

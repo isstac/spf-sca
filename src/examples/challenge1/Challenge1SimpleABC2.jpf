@@ -1,0 +1,30 @@
+target = challenge1.CRIMESimple
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.SideChannelQuantifierABC
+
+model_count.mode = abc.linear_integer_arithmetic
+
+
+symbolic.debug = false
+
+symbolic.dp=z3bitvector
+
+sidechannel.high_input_size = 5
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.min_int=1
+symbolic.max_int=62
+
+symbolic.min_byte=1
+symbolic.max_byte=62
+
+sidechannel.min_high=1
+sidechannel.max_high=62
+
+sidechannel.verbose = false

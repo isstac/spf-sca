@@ -1,0 +1,42 @@
+target = engagement1.lawdb.Driver
+
+# 1 is INSERT, 8 is SEARCH 
+target.args = 8
+
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
+
+#listener=sidechannel.singlerun.SideChannelQuantifier
+#listener=sidechannel.singlerun.noise.symbolic.MinEntropyQuantifier
+
+#shell=sidechannel.canopy.probabilistic.SymbolicShannonShell
+shell=sidechannel.canopy.probabilistic.SymbolicRenyiShell
+
+#canopy options:
+symbolic.security.sampling.termination.samplingsize=50
+symbolic.security.sampling.livestats=false
+symbolic.security.sampling.stats=false
+
+sidechannel = timing
+
+symbolic.debug = false
+
+#symbolic.dp=z3bitvector
+
+sidechannel.high_input_size = 1
+
+SMT.theory = linear
+
+cost.interval = 2
+
+symbolic.reliability.tmpDir=${spf-sca}/build/tmp
+symbolic.reliability.omegaPath=${spf-sca}/tools/omega/oc
+symbolic.reliability.lattePath=${spf-sca}/tools/latte-integrale-1.7.3/bin/count
+symbolic.reliability.barvinokPath=${spf-sca}/tools/barvinok/bin/iscc
+
+symbolic.counter=barvinok
+
+symbolic.min_int=0
+symbolic.max_int=1023
+
+sidechannel.verbose = false

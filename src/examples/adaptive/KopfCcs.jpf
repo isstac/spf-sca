@@ -1,0 +1,20 @@
+target=adaptive.KopfCcs
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 2
+sidechannel.high_input_size = 1
+
+sidechannel.min_high=1
+sidechannel.max_high=5
+
+SMT.theory = linear
+
+sidechannel.smt2 = ${jpf-security}/build/tmp/kopfccs.smt2
+
+sidechannel.verbose = false

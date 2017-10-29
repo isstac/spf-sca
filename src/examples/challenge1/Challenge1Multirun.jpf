@@ -1,0 +1,31 @@
+target = challenge1.CRIMEMultirun
+
+mutirun.secure_method=challenge1.LZ77T.compress
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=true
+
+multirun.num_run = 2
+sidechannel.high_input_size = 5
+
+greedy.input = ${jpf-security}/build/tmp/input.txt
+sidechannel.smt2 = ${jpf-security}/build/tmp/challenge1Multirun.smt2
+
+symbolic.dp=z3bitvector
+#symbolic.dp=no_solver
+
+symbolic.min_int=1
+#symbolic.max_int=62
+symbolic.max_int=2
+
+symbolic.min_byte=1
+#symbolic.max_byte=62
+symbolic.max_byte=2
+
+sidechannel.min_high=1
+#sidechannel.max_high=62
+sidechannel.max_high=2

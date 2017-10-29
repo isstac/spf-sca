@@ -1,0 +1,24 @@
+target = engagement1.gabfeed.math.SimpleDriver
+
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.singlerun.TimingChannelQuantifier
+
+symbolic.debug = true
+
+symbolic.dp=z3bitvectorinc
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.min_int=1
+symbolic.max_int=15
+
+symbolic.min_long=1
+symbolic.max_long=15
+
+sidechannel.verbose = true
+search.depth_limit=3

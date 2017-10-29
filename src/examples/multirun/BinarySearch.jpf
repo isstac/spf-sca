@@ -1,0 +1,30 @@
+target=multirun.BinarySearch
+
+mutirun.secure_method=multirun.BinarySearch.foo
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.multirun.MultiRunListener
+
+greedy=false
+
+multirun.num_run = 2
+sidechannel.high_input_size = 3
+
+symbolic.min_byte=1
+symbolic.max_byte=3
+
+symbolic.min_int=1
+symbolic.max_int=3
+
+sidechannel.min_high=1
+sidechannel.max_high=3
+
+greedy.input = ${jpf-security}/build/tmp/input.txt
+sidechannel.smt2 = ${jpf-security}/build/tmp/binarysearch.smt2
+
+symbolic.dp=z3bitvector
+#symbolic.dp=no_solver
+
+sidechannel.verbose = false

@@ -1,0 +1,30 @@
+target = engagement1.gabfeed.webserver.Driver
+
+#the first argument is the version, i.e. User1
+#the second argument is the length
+target.args = 1,3
+
+#model_count.mode=latte
+model_count.mode=abc.linear_integer_arithmetic
+
+
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+listener=sidechannel.abc.TimingSideChannelListener
+
+symbolic.debug = false
+
+symbolic.dp=z3bitvector
+
+symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
+symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+
+symbolic.min_int=0
+symbolic.max_int=3
+
+symbolic.min_char=0z
+symbolic.max_char=3
+
+sidechannel.verbose = false

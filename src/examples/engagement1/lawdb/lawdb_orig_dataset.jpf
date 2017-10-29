@@ -1,0 +1,39 @@
+classpath=${jpf-security}/build/main;${jpf-security}/build/examples
+sourcepath=${jpf-security}/src/examples
+
+target = engagement1.lawdb.DriverOrigDataset
+
+##Exhaustive
+
+# Shannon
+#shell=sidechannel.singlerun.noise.symbolic.SymbolicNoiseShell
+
+# Min entropy
+shell=sidechannel.singlerun.noise.symbolic.SymbolicMinShell
+
+##Canopy
+canopy.termination.samplingsize=300
+canopy.seed=-1359243304
+canopy.seed.random=false
+canopy.stats=false
+canopy.livestats=false
+
+# Shannon
+#shell=sidechannel.canopy.probabilistic.SymbolicShannonShell
+
+# Min entropy
+#shell=sidechannel.canopy.probabilistic.SymbolicRenyiShell
+
+
+SMT.theory = linear
+sidechannel = timing
+
+symbolic.counter=barvinok
+
+sidechannel.verbose = false
+
+symbolic.optimizechoices=false
+
+symbolic.debug = false
+
+symbolic.dp=z3
