@@ -1,5 +1,5 @@
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 target = engagement1.lawdb.DriverOrigDataset
 

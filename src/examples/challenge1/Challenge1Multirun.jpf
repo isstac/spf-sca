@@ -2,8 +2,8 @@ target = challenge1.CRIMEMultirun
 
 mutirun.secure_method=challenge1.LZ77T.compress
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.multirun.MultiRunListener
 
@@ -12,8 +12,8 @@ greedy=true
 multirun.num_run = 2
 sidechannel.high_input_size = 5
 
-greedy.input = ${jpf-security}/build/tmp/input.txt
-sidechannel.smt2 = ${jpf-security}/build/tmp/challenge1Multirun.smt2
+greedy.input = ${spf-sca}/build/tmp/input.txt
+sidechannel.smt2 = ${spf-sca}/build/tmp/challenge1Multirun.smt2
 
 symbolic.dp=z3bitvector
 #symbolic.dp=no_solver

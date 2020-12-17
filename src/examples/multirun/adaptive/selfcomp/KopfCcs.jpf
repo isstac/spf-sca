@@ -1,7 +1,7 @@
 target = multirun.adaptive.selfcomp.KopfCcs
 
-classpath=${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 mutirun.secure_method=multirun.adaptive.minimax.KopfCcs.foo
 
@@ -20,7 +20,7 @@ sidechannel.max_high=5
 
 SMT.theory = linear
 
-sidechannel.tmpDir = ${jpf-security}/build/tmp
+sidechannel.tmpDir = ${spf-sca}/build/tmp
 
 symbolic.debug = false
 

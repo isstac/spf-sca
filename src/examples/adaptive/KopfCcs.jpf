@@ -1,7 +1,7 @@
 target=adaptive.KopfCcs
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.multirun.MultiRunListener
 
@@ -15,6 +15,6 @@ sidechannel.max_high=5
 
 SMT.theory = linear
 
-sidechannel.smt2 = ${jpf-security}/build/tmp/kopfccs.smt2
+sidechannel.smt2 = ${spf-sca}/build/tmp/kopfccs.smt2
 
 sidechannel.verbose = false

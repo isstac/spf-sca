@@ -1,7 +1,7 @@
 target=multirun.qualitative.BitCopy
 target.args=5
 
-classpath=${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 symbolic.dp=z3bitvector

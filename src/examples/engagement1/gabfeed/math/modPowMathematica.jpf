@@ -3,12 +3,12 @@ target = engagement1.gabfeed.math.Driver
 
 target.args=3
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.MathematicaPCListener
 
-temp.directory = ${jpf-security}/build/tmp
+temp.directory = ${spf-sca}/build/tmp
 
 symbolic.dp=z3bitvector
 

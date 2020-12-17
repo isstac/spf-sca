@@ -1,7 +1,7 @@
 target=multirun.adaptive.selfcomp.Example3Adaptive
 
-classpath=${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 mutirun.secure_method=multirun.adaptive.selfcomp.Example3Adaptive.foo
 
@@ -20,7 +20,7 @@ sidechannel.max_high=4
 
 SMT.theory = linear
 
-sidechannel.tmpDir = ${jpf-security}/build/tmp
+sidechannel.tmpDir = ${spf-sca}/build/tmp
 
 symbolic.debug = false
 

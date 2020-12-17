@@ -1,13 +1,13 @@
 target=sidechannel.TestBigInteger
 symbolic.method=sidechannel.TestBigInteger.test(sym)
 
-classpath=${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=gov.nasa.jpf.symbc.SymbolicListener
 #listener = sidechannel.TimingChannelListener
 
-#symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+#symbolic.reliability.tmpDir=${spf-sca}/build/tmp
 #symbolic.reliability.omegaPath=/home/qsp/Programs/omega/oc
 #symbolic.reliability.lattePath=/home/qsp/Programs/latte-integrale-1.7.3/bin/count
 

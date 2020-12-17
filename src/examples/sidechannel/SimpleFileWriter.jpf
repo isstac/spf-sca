@@ -2,14 +2,14 @@ target=sidechannel.SimpleFileWriter
 
 #sidechannel=timing
 
-classpath=${jpf-security}/build/examples;
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples;
+sourcepath=${spf-sca}/src/examples
 
 listener = sidechannel.singlerun.FileChannelQuantifier
 
-symbolic.reliability.tmpDir=${jpf-security}/build/tmp
-symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
-symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+symbolic.reliability.tmpDir=${spf-sca}/build/tmp
+symbolic.reliability.omegaPath=${spf-sca}/tools/omega/oc
+symbolic.reliability.lattePath=${spf-sca}/tools/latte-integrale-1.7.3/bin/count
 
 #symbolic.min_int=0
 #symbolic.max_int=9

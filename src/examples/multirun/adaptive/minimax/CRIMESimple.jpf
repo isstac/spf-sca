@@ -1,7 +1,7 @@
 target=multirun.adaptive.minimax.CRIMESimple
 
-classpath=${jpf-security}/build/examples;${jpf-security}/build/classes
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples;${spf-sca}/build/classes
+sourcepath=${spf-sca}/src/examples
 
 adaptive=minmax
 
@@ -17,10 +17,10 @@ symbolic.max_int=2
 sidechannel.min_high=0
 sidechannel.max_high=2
 
-sidechannel.tmpDir = ${jpf-security}/build/tmp
-symbolic.reliability.tmpDir = ${jpf-security}/build/tmp/mc
-symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
-symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+sidechannel.tmpDir = ${spf-sca}/build/tmp
+symbolic.reliability.tmpDir = ${spf-sca}/build/tmp/mc
+symbolic.reliability.omegaPath=${spf-sca}/tools/omega/oc
+symbolic.reliability.lattePath=${spf-sca}/tools/latte-integrale-1.7.3/bin/count
 
 symbolic.debug = false
 

@@ -1,7 +1,7 @@
 target=multirun.Example3
 
-classpath=${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 mutirun.secure_method=multirun.Example3.foo
 
@@ -18,8 +18,8 @@ symbolic.max_int=4
 sidechannel.min_high=0
 sidechannel.max_high=4
 
-greedy.input = ${jpf-security}/build/tmp/input.txt
-sidechannel.smt2 = ${jpf-security}/build/tmp/example3.smt2
+greedy.input = ${spf-sca}/build/tmp/input.txt
+sidechannel.smt2 = ${spf-sca}/build/tmp/example3.smt2
 
 symbolic.debug = false
 

@@ -3,8 +3,8 @@ target.args=1
 
 mutirun.secure_method=multirun.adaptive.selfcomp.ModPowAdaptive.modPowFastKocherReduction
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 adaptive=selfcomp
 
@@ -13,8 +13,8 @@ attack.tree=greedy
 multirun.num_run = 3
 sidechannel.high_input_size = 1
 
-sidechannel.tmpDir = ${jpf-security}/build/tmp
-sidechannel.smt2 = ${jpf-security}/build/tmp/simplifiedRSA.smt2
+sidechannel.tmpDir = ${spf-sca}/build/tmp
+sidechannel.smt2 = ${spf-sca}/build/tmp/simplifiedRSA.smt2
 
 # optional settings
 symbolic.min_int=1

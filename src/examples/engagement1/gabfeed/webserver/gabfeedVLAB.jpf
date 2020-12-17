@@ -8,8 +8,8 @@ target.args = 1,4
 model_count.mode=latte
 
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.abc.TimingSideChannelListener
 
@@ -17,9 +17,9 @@ symbolic.debug = false
 
 symbolic.dp=z3bitvector
 
-symbolic.reliability.tmpDir=${jpf-security}/build/tmp
-symbolic.reliability.omegaPath=${jpf-security}/tools/omega/oc
-symbolic.reliability.lattePath=${jpf-security}/tools/latte-integrale-1.7.3/bin/count
+symbolic.reliability.tmpDir=${spf-sca}/build/tmp
+symbolic.reliability.omegaPath=${spf-sca}/tools/omega/oc
+symbolic.reliability.lattePath=${spf-sca}/tools/latte-integrale-1.7.3/bin/count
 
 symbolic.min_int=1
 symbolic.max_int=4

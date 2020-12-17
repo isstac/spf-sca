@@ -1,7 +1,7 @@
 target=adaptive.ArrayEquals
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.multirun.MultiRunListener
 
@@ -18,7 +18,7 @@ symbolic.max_int=256
 
 SMT.theory = linear
 
-sidechannel.smt2 = ${jpf-security}/build/tmp/equals.smt2
+sidechannel.smt2 = ${spf-sca}/build/tmp/equals.smt2
 
 symbolic.dp = no_solver
 

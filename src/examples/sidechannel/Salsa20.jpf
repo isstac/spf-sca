@@ -1,4 +1,4 @@
-@using jpf-security
+@using spf-sca
 @using jpf-symbc
 
 target=sidechannel.Salsa20
@@ -6,12 +6,12 @@ symbolic.method=sidechannel.Salsa20.salsaCore(con#con#con)
 
 #sidechannel=timing
 
-classpath=${jpf-security}/build/examples;
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/examples;
+sourcepath=${spf-sca}/src/examples
 
 listener = sidechannel.singlerun.TimingChannelQuantifierNonLinear
 
-symbolic.reliability.tmpDir=${jpf-security}/build/tmp
+symbolic.reliability.tmpDir=${spf-sca}/build/tmp
 symbolic.reliability.omegaPath=oc
 symbolic.reliability.lattePath=count
 

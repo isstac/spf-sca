@@ -1,7 +1,7 @@
 target=adaptive.ModPow
 
-classpath=${jpf-security}/build/main;${jpf-security}/build/examples
-sourcepath=${jpf-security}/src/examples
+classpath=${spf-sca}/build/main;${spf-sca}/build/examples
+sourcepath=${spf-sca}/src/examples
 
 listener=sidechannel.multirun.MultiRunListener
 
@@ -25,7 +25,7 @@ sidechannel.max_high=15
 
 MaxSMT = 1
 
-sidechannel.smt2 = ${jpf-security}/build/tmp/segmented.smt2
+sidechannel.smt2 = ${spf-sca}/build/tmp/segmented.smt2
 
 symbolic.dp = no_solver
 #symbolic.dp = z3bitvector
