@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import gov.nasa.jpf.Config;
 
 /**
- * Auxiliary class to run jpf-security from command line
+ * Auxiliary class to run spf-sca from command line
  *
  * @author Quoc-Sang Phan <sang.phan@sv.cmu.edu>
  *
